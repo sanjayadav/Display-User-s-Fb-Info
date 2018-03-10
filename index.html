@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>User's Facebook Info</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="See facebook user's information using Facebook Graph API">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href = "style.css" rel = "stylesheet" text ="text/css">
+ 
+</head>
+
+
+<body>
+	
+	<section id="top">
+		            
+		<div class="container"><!-- conatiner starts -->
+
+		    <div class="row"> <!-- hello row starts -->
+
+		        <div class="col-xs-12">
+		        
+		            <h1 class="heading-font">Hello!</h1>
+
+		        </div>
+
+		    </div> <!-- hello row ends -->
+
+		    <div class="row" id="api-row"><!-- api row starts -->
+		    	
+		    	<div class="col-xs-10 col-xs-offset-1">
+		    		
+		    		<h2 class="heading-font">Please paste your facebook user access token here</h2>
+
+				    <div>
+					    <input type="text" id="api-id">
+					    <input  type="submit" id="submit" class="button btn text-font">
+				    </div>
+
+				</div>
+
+		    </div><!-- api row ends -->
+
+		    <div class="row" id="user-data-row"> <!-- User data row starts -->
+
+		        <div class="col-xs-12  col-md-6">
+
+		        	<div id="user-info">
+
+			        	<h2 class="heading-font">User Info</h2>
+
+			        	<button id="show-info-btn" class="button text-font btn "><span> Show User Info </span></button>
+
+		            </div>
+
+		            <div id="profile-pic-tab">
+
+		        		<img id="profile-pic" class="my-image">
+
+		            </div>
+		            
+		        </div>
+
+		        <div class="col-xs-12 col-md-6" id="section-line">
+
+		        	<div id="recent-post">
+		        	
+			        	<h2 class="heading-font">Recent Posts</h2>
+
+			        	<button id="show-post-btn" class="button text-font btn "><span>Show Recent Posts </span></button>
+
+		        	</div>
+
+		        	<div id="about-tab">
+
+		                <h2 id="userName" class="heading-font"></h2>
+		                <i class="fa fa-address-book-o"></i>  <span id="userEmail" class="text-font"></span><br>
+	                    <i class="fa fa-globe"></i>   <span id="userWebsite" class="text-font"></span> <br>
+		                <i class="fa fa-birthday-cake"></i>  <span id="userBirthday" class="text-font"></span><br>
+		                <i class="fa fa-venus-mars"></i>  <span id="userGender" class="text-font"></span><br>
+		                <i class="fa fa-language"></i>  <span id="userLanguage" class="text-font"></span><br>
+		                <i class="fa fa-home"></i>  <span id="userHomeTown"  class="text-font"></span><br>
+		                <i class="fa fa-heart"></i>  <span id="userRelation" class="text-font"></span><br>
+
+		                <h2 class="heading-font">Work and Education</h2>
+						<i class="fa fa-suitcase"></i>  <span id="userWork" class="text-font"></span><br>
+	                    <i class="fa fa-book"></i>  <span id="userEducation" class="text-font"></span><br>
+
+                    </div>   
+                
+		        </div>
+
+		    </div> <!-- User data row ends -->
+
+
+		    <div class="row" id="recent-post-row" > <!-- Recent posts row starts -->
+
+		    		<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" >
+
+		    			<div class="facebookfeed text-font" >
+		    				<h2 class="heading-font">Recent Posts from your facebook account</h2>
+			    			<div id="feed1"></div>
+			    			<div id="feed2"></div>
+	              		    <div id="feed3"></div>
+	              		    <div id="feed4"></div>
+	              		    <div id="feed5"></div>
+
+						</div>
+
+		    		</div>
+
+		    </div> <!-- Recent posts row ends-->
+
+		    <div class="row">
+    			<div class="col-xs-10 col-xs-offset-1" >
+					 <button class="goBackBtn button text-font btn">Previous page</button>
+ 				</div>
+			</div>
+		    
+		</div> <!-- conatiner ends -->
+   
+    </section> <!-- section ends -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="fb-data.js"></script>
+
+</body>
+</html>
